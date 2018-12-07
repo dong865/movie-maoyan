@@ -1,0 +1,2 @@
+@import "../index/index.wxss"; 
+.container{padding-top:145rpx;}

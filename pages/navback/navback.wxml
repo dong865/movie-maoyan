@@ -1,0 +1,5 @@
+<!--pages/navback/navback.wxml-->
+<view class='navback' plain='true'>
+<text bindtap='goBack'>{{"⇐"}}</text>
+<image bindtap='goHome' src='../../image/home.png'></image>
+</view>

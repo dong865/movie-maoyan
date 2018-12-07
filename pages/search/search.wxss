@@ -1,0 +1,7 @@
+@import "../navback/navback.wxss"; 
+@import "../index/index.wxss";
+.navback{color: black;background: white;}
+.search{border-radius: 50rpx; padding: 10rpx 30rpx; background: #f3f3f3;width: 90%;border: none;}
+ .searchDiv{padding-top: 80rpx;display: flex;flex-direction: row;justify-content: space-around;} 
+
+ .searchList{padding-top: 230rpx;}

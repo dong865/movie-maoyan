@@ -1,0 +1,15 @@
+<!--pages/qun/qun.wxml-->
+<include src="../navback/navback.wxml" />
+<view class='header'></view>
+<view class='container'>
+  <view class='detail'>
+    <view>QQ群：<text bindtap='copyqq'>18888899<text>复制</text></text></view>
+    <view>微信群需要邀请</view>
+    <view>请先加我微信</view>
+    <view>微信号：<text bindtap='copyweixin'>865832<text>复制</text></text></view>
+    <view>或者扫码下方的二维码</view>
+    <view class='image' bindtap='previewImg'>
+      <image src='../../image/weixin.png' mode='aspectFit'></image>
+    </view>
+  </view>
+</view>

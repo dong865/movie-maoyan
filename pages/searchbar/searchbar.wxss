@@ -1,0 +1,4 @@
+/* pages/sreach/sreach.wxss */
+.search{border: 1rpx solid #ccc;margin: 64rpx 20rpx 22rpx;border-radius: 50rpx;width: 55%;padding: 7rpx 30rpx;
+}
+ .searchDiv{background: white;width: 100%;position: fixed;border-bottom: 1rpx solid #f0f0f0;} 

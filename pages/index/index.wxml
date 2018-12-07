@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<include src='../searchbar/searchbar.wxml' />
+<view class="container">
+  <!--设定模板  -->
+  <template name="movieBlock">
+    <block wx:for='{{movieList}}' wx:for-item="movie" wx:key='this'>
+      <view class='movie'bindtap='toDetail' id="{{movie.id}}">
+        <image class='movieImg' src='{{movie.img}}' mode='cover'></image>     
+        <view class='movieText'>
+          <text class='title'>{{movie.nm}}</text>
+          <text>主演：{{movie.star}}</text>
+          <text wx:if='{{movie.comingTitle}}'>{{movie.comingTitle}}</text>
+          <text wx:else>{{movie.rt}}</text>
+          <block wx:for="{{timeList}}" wx:for-item="time" wx:key='this'>
+            <view wx:if="{{time.title==movie.nm}}">
+              <text class='time' wx:if="{{time.time}}">字幕时间：{{time.time}}</text>
+              <text class='time' wx:if="{{time.inform}}">...</text>
+            </view>
+          </block>
+        </view>
+      </view>
+  </block> 
+  </template>
+  <!--加载模板  -->
+  <template is="movieBlock" data="{{movieList,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_1,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_2,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_3,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_4,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_5,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_6,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_7,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_8,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_9,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_10,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_11,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_12,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_13,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_14,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_15,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_16,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_17,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_18,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_19,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_20,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_21,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_22,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_23,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_24,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_25,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_26,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_27,timeList}}"/>
+  <view wx:if="{{movieMore_26==null}}" class='loading'>加载中...</view>
+  <view wx:if="{{movieMore_26}}" class='loading'>————这是我的底线————</view>
+</view>

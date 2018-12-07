@@ -1,0 +1,19 @@
+
+<view class="container">
+<!-- 用户头像名字部分 -->
+  <view class='userinfo'>
+    <view class='{{info.name?"infoDiv":"none"}}'>
+      <image src='{{info.headPic}}' mode='cover'></image>
+      <view class='name'>{{info.name}}</view>
+    </view>
+    <view class='{{info.name?"none":"login"}}'>
+      <view class='headPic'></view>
+      <button size='mini' plain='true' class="info" open-type='getUserInfo' bindgetuserinfo='getInfo'>登陆</button>
+    </view> 
+  </view>
+<!--导航  -->
+  <view class='content'>
+    <view bindtap='reward'>打赏作者</view>
+    <view bindtap='qun'>加入字幕群</view>
+  </view>
+</view>

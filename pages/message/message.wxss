@@ -1,0 +1,14 @@
+/* 头部 */
+@import "../navback/navback.wxss";
+.imgbg{
+  width: 100%;
+  height: 560rpx; 
+  filter: saturate(300%); 
+}
+.cover{width: 220rpx;height:300rpx;position: absolute;top: 160rpx;left: 50%;transform: translateX(-50%)}
+.title{position: absolute;top:480rpx;width: 100%;text-align: center;color: white;font-weight: bold;}
+/* 留言部分 */
+.content{padding: 20rpx;}
+.content textarea{background: #f0f0f0;padding: 20rpx;border-radius: 20rpx;width: 90%;margin: 50rpx auto;font-size: 35rpx;}
+.content button{background:rgb(255, 140, 0);color: white;font-size: 35rpx;width: 95%;margin: auto;}
+.content input{background: #f0f0f0;font-size:35rpx;border-radius: 20rpx;width: 90%;margin: auto;padding: 20rpx;margin-top: 50rpx;}

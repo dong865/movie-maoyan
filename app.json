@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/hot/hot",
+    "pages/myinfo/myinfo",
+    "pages/searchbar/searchbar",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/control/control",
+    "pages/navback/navback",
+    "pages/message/message",
+    "pages/qun/qun"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#f0f0f0",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor":"#f29f3f",
+    "borderStyle":"white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "将映",
+        "iconPath": "image/new.png",
+        "selectedIconPath": "image/newOn.png"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "text": "热映",
+        "iconPath": "image/hot.png",
+        "selectedIconPath": "image/hotOn.png"
+      },
+      {
+        "pagePath": "pages/myinfo/myinfo",
+        "text": "我的",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/myOn.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

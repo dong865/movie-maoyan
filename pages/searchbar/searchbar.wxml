@@ -1,0 +1,5 @@
+<!--pages/sreach/sreach.wxml-->
+  <view class='searchDiv' bindtap='toSearch' style='{{searchF}}'>
+    <input class='search' placeholder='电影/导演/演员'></input>
+  </view>
+

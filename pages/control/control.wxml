@@ -1,0 +1,37 @@
+<!-- 头部 -->
+<include src="../navback/navback.wxml" />
+<view class='imgbg' style='background-image:url({{bg}});'></view>
+<image class='cover' mode='scaleToFill' src='{{cover}}'></image> 
+<view class='title'>{{title}}</view>
+<!-- 留言部分 -->
+<view class='content'>
+  <view class='navbar'>
+    <view class='{{onTime?"navbarstyle":""}}' bindtap='clickTime'>添加字幕</view>
+    <view class='{{onInform?"navbarstyle":""}}' bindtap='clickInform'>添加通知</view>
+  </view>
+  
+  <!-- <view class='timeBlock {{onTime?"":"noneStyle"}}'>
+    
+  </view> -->
+  <swiper class="conSwiper" bindchange="slide" current="{{index}}">
+    <swiper-item>
+    <form bindsubmit='formtime_admin'> 
+      <view class='timeBlock'>
+        <input name='time' placeholder='出字幕时间' maxlength="8"></input>
+        <input class='marke' name='marke' placeholder='备注'></input>
+        <button type='default' form-type='submit'>提交</button>
+      </view>
+      </form>
+    </swiper-item>
+    <swiper-item>
+    <form bindsubmit='forminform_admin'> 
+      <view class='informBlock'>
+        <input name='inform' placeholder='请输入内容'></input>
+        <button type='default' form-type='submit'>提交</button>
+      </view>
+      </form>
+    </swiper-item>
+  </swiper>
+  
+ 
+</view>

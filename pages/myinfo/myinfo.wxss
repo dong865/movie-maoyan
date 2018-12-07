@@ -1,0 +1,11 @@
+
+.userinfo{box-shadow: 4rpx 4rpx 20rpx #ccc;margin: 150rpx 20rpx 20rpx;border-radius: 20rpx;}
+button{border-radius: 50rpx;position: static;background: #00B26A;color: #fff;margin-top: 50rpx}
+.infoDiv,.login{display: flex;flex-direction: column;align-items: center;justify-content: center;padding: 100rpx 0;}
+.infoDiv image{width: 128rpx;height: 128rpx;border-radius: 50%;}
+.none{display: none;}
+.headPic{width: 128rpx;height: 128rpx;border-radius: 50%;border: 1rpx solid #ccc;}
+.name{padding: 20rpx;}
+/* 内容部分 */
+.content{margin-top: 50rpx;padding: 20rpx;}
+.content view{border-bottom: 1rpx solid #f0f0f0;line-height: 60rpx;padding: 30rpx;}

@@ -1,0 +1,12 @@
+<include src='../searchbar/searchbar.wxml' />
+<view class="container">
+  <import src='../index/index.wxml' />
+  <template is='movieBlock' data='{{movieList,timeList}}' />
+  <template is="movieBlock" data="{{movieList:movieMore_1,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_2,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_3,timeList}}"/>
+  <template is="movieBlock" data="{{movieList:movieMore_4,timeList}}"/>
+  <view wx:if="{{movieMore_4==null}}" class='loading'>加载中...</view>
+  <view wx:if="{{movieMore_4}}" class='loading'>————这是我的底线————</view>
+</view>
+

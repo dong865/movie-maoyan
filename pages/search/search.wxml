@@ -1,0 +1,12 @@
+<!--pages/search/search.wxml-->
+<include src='../navback/navback.wxml' />
+<form bindsubmit='onShow'>
+  <view class='searchDiv' style='{{searchF}}'>
+    <input class='search' placeholder='电影/导演/演员' auto-focus='true' name='search' bindconfirm='onShow'></input>
+  </view>
+</form>
+<!-- 搜索列表 -->
+<view class='searchList'>
+  <import src='../index/index.wxml' />
+  <template is='movieBlock' data='{{movieList,timeList}}' />
+</view>

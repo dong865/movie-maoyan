@@ -1,0 +1,58 @@
+
+@import "../navback/navback.wxss";
+/*loading  */
+.loading{position: absolute;top: 0;bottom: 0;left: 0;right: 0;z-index: 2;background: white;}
+.loading image{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 50%;}
+/* 头部 */
+ .headBg{background-color: #333;height: 700rpx;width: 100%;position: absolute;z-index: -1;} 
+  .headBg_2{background-repeat: repeat-y;position: absolute;top: 0;right: 0;left: 0;bottom: 0;height: 700rpx;filter: blur(8rpx);background-size: 100% 600rpx;opacity: .6;z-index: -1;}  
+
+.movieDetail{color: white;display: flex;justify-content: space-between;padding: 0 40rpx;}
+.movieDetail image{width: 250rpx;height: 350rpx;align-self: flex-end;box-shadow: -2rpx -2rpx 200rpx 10rpx #222;flex-shrink: 0}
+.movieInfo{display: flex;flex-direction: column;}
+.movieInfo text{padding: 10rpx;}
+.movieTitle{margin-top:150rpx;padding: 20rpx 50rpx;color: white;}
+.movieTitle .nm{font-size: 35rpx;font-weight: bold;}
+/* 管理员入口 */
+.addTimeAdmin{margin-top: 88rpx;margin-left:10rpx;position: relative;color: #f29f3f;height: 63rpx;width: 200rpx;}
+.addTimeAdmin .text{position: absolute;top: 46%;left: 50%;transform: translate(-50%,-50%);white-space: nowrap;}
+.addTimeAdmin .shield{position: absolute;background: black;width: 100%;top: 0;bottom: 0;opacity: .2;border-radius: 10rpx;}
+/*content  */
+.content{background:white;margin-bottom: 100rpx;} 
+/*留言部分  */
+.content .messageTitle{color: #aaa;font-size: 30rpx;font-weight: 900;font-style: italic;background: #f3f3f3;padding: 20rpx;}
+.content .comment{padding: 20rpx 20rpx 0;}
+.content .infoHeader{margin-top: 20rpx}
+.content .userName{padding: 14rpx;}
+.content .userName .name{font-weight: bold;}
+.content .userName .update{color:#aaa}
+.content  .adminPlate .time{color:#f29f3f;font-weight: bold;}
+.content .marke,.content .inform{color: #888;margin-top: 16rpx;}
+.content .userinfo{display: flex;}
+.content .board{padding: 20rpx;padding-left: 80rpx;border-bottom: 1rpx solid #f0f0f0;}
+.content .userName .nameSign{background: #f29f3f;padding: 2rpx 14rpx;color: white;border-radius: 10rpx;font-size: 22rpx;font-weight: 100;margin-left: 10rpx;}
+.headPic{position: relative;border-radius: 50%;width: 80rpx;height:80rpx;}
+.headPic image{width: 80rpx;height:80rpx;border-radius: 50%;}
+.headPic .admin{position: absolute;width:76rpx;height:76rpx;border-radius: 50%;top: 50%;left:50%;transform: translate(-50%,-50%);border: 2rpx solid #f29f3f;}  
+.content .messagePlate{text-align: left;background: white;}
+.messagePlate .time{font-weight: bold;}
+/*剧情介绍  */
+.drama{margin-top: 50rpx;}
+.drama .infoClose{line-height: 50rpx;padding: 20rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;}
+.drama .infoOpen{line-height: 50rpx;padding: 20rpx;}
+/* 向下的三角标志 */
+.down{width: 700rpx;height: 80rpx;position: relative;align-self: center;top: -30rpx;}
+.down::before{content: '';top: 40rpx;left: 335rpx;width: 0;height: 0;position: absolute;
+border-top:16rpx solid #333;border-right: 16rpx solid transparent;border-left:  16rpx solid transparent; }
+.down::after{content: ''; position: absolute;top: 39rpx;left: 335rpx;width: 0;height: 0;border-top:16rpx solid #fff;border-right: 16rpx solid transparent;border-left:  16rpx solid transparent;}
+/* 向上的三角标志 */
+.up{ width: 700rpx;height: 80rpx;position: relative;align-self: center;top: -30rpx;}
+.up::before{content: '';top: 39rpx;left: 335rpx;width: 0;height: 0;position: absolute;border-bottom:16rpx solid #333;border-right: 16rpx solid transparent;border-left:  16rpx solid transparent; }
+.up::after{content: ''; position: absolute;top: 41rpx;left: 335rpx;width: 0;height: 0;border-bottom:16rpx solid #fff;border-right: 16rpx solid transparent; border-left:  16rpx solid transparent;}
+
+/* 底部按钮 */
+.base{position:fixed;bottom: 0rpx;width: 100%;font-size: 35rpx;background: #f29f3f;color: white;text-align: center;padding: 20rpx 0;opacity: .9;}

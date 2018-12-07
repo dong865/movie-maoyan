@@ -1,0 +1,108 @@
+<!--pages/detail/detail.wxml-->
+<view class='container'> 
+<!--loading  -->
+<view class='loading' wx:if="{{movieDetail.img==null}}">
+  <image mode='aspectFit' src='../../image/loading.gif'></image>
+</view>
+<!--头部  -->
+  <view class='headBg'></view>
+  <view class='headBg_2' style='background-image:url({{movieDetail.imgBg}})' ></view> 
+  <include src='../navback/navback.wxml' />
+  <view class='movieTitle'>
+    <view class='nm'>{{movieDetail.nm}}</view>
+    <view class='enm'>{{movieDetail.enm}}</view>
+  </view>
+  <view class='movieDetail'>   
+    <view class='movieInfo'>
+      <text>{{movieDetail.cat}}</text>
+      <text>{{movieDetail.src}}/{{movieDetail.dur}}</text>
+      <text>{{movieDetail.pubDesc}}</text>
+      <!-- <text>{{movieDetail.dir}}</text>
+      <text>{{movieDetail.star}}</text> -->
+      <!--添加时间按钮  -->
+      <view wx:if="{{admin<=1}}" class='addTimeAdmin' bindtap='control_in'> 
+      <view class='shield'></view>
+        <view class='text'>管理员入口</view>
+        
+      </view>
+    </view>
+    <image src='{{movieDetail.img}}'></image> 
+  </view>
+<!--content  -->
+  <view class='content'>
+    <!--管理员留言部分  -->
+    <view class='adminPlate' wx:if="{{timeList.time||timeList.inform}}">
+        <!--用户信息模板  -->
+        <template name="userStyle">
+          <view class='userinfo'>
+            <view class='headPic adminPic'>
+              <image src="{{creator.headPic}}"></image>
+              <view wx:if="{{manage_remote<=1}}" class='admin'></view>
+            </view>
+            <view class='userName'>
+              <view>
+                <text class='name'>{{creator.name}}</text>
+                <text wx:if='{{manage_remote<=1}}' class='nameSign'>管理员</text>
+              </view>
+              <view class='update'>{{timeList.update}}</view>
+            </view>
+          </view>
+        </template>
+        <!--字幕时间模块  -->
+      <view wx:if="{{timeList.time||timeList.inform}}" class='timeArea_admin'>
+        <view class='messageTitle'>字幕时间≡</view> 
+          <!--管理员留言板块  -->
+          <view class='comment'>
+            <view wx:if="{{timeList.time}}" class='timeArea_admin'>
+              <!-- 信息 -->
+              <view class='infoHeader'>
+                <template is="userStyle" data="{{creator,manage_remote,timeList}}"/>
+              </view>
+              
+              <!-- 留言 -->
+              <view class='board'>
+                <view class='time'>{{timeList.time}}</view>
+                <view class='marke' wx:if="{{timeList.marke}}">{{timeList.marke}}</view>
+              </view>
+            </view>
+            <!-- 通知 -->
+            <view wx:if="{{timeList.inform}}" class='timeArea_admin'>
+              <view class='infoHeader'>
+                <template is="userStyle" data="{{creator:creator_2,manage_remote:manage_remote_2,timeList}}"/>
+              </view>
+              <view class='board'>
+                <view class='inform'>{{timeList.inform}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+    </view>  
+    <!--普通用户留言部分  -->
+    <view class='messagePlate'  wx:if="{{messageList}}">
+      <view class='messageTitle'>用户留言≡</view>
+      <view class='comment'>
+        <view wx:for="{{messageList}}" wx:key="this" class='timeArea'>
+          <!-- 用户信息 -->
+          <view class='infoHeader'>
+            <template is="userStyle" data="{{creator:item,manage_remote:item.manage,timeList:item}}" />
+          </view>
+          <!-- 用户留言 -->
+          <view class='board'>
+            <view class='time' wx:if="{{item.time}}">{{item.time}}</view>
+            <view class='marke' wx:if="{{item.marke}}">{{item.marke}}</view>
+          </view>
+        </view>
+      </view>     
+    </view>
+    <!-- 剧情简介 -->
+    <view class='drama' bindtap='on_off'>
+      <view class='{{status?"infoOpen":"infoClose"}}'>{{movieDetail.dra}}</view>
+      <view class='{{status?"up":"down"}}'></view>
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <view class='base' bindtap='message_in'>
+    添加字幕
+  </view>
+</view>
+<!--test  -->
